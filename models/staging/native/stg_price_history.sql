@@ -7,4 +7,4 @@ select
     volume,
     tradingdate as trading_date
 
-from {{ source('raw', 'price_history') }}
+from {{ source('financial_raw', 'price_history') }}

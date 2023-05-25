@@ -2,7 +2,7 @@
 version: 2
 
 sources:
-  - name: raw
+  - name: financial_raw
     description: pretty much everything collected from tcbs site (With organization info from SSI)
     database: financial_data
     schema: financial_raw
