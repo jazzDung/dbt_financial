@@ -3,22 +3,22 @@ dbt_financial:
 
     dev:
       type: postgres
-      threads: [1 or more]
-      host: [host]
-      port: [port]
-      user: [dev_username]
-      pass: [dev_password]
-      dbname: [dbname]
-      schema: [dev_schema]
+      threads: 1
+      host: localhost
+      port: 5432
+      user: postgres
+      pass: 02092001
+      dbname: financial_data
+      schema: financial_raw
 
     prod:
       type: postgres
-      threads: [1 or more]
-      host: [host]
-      port: [port]
-      user: [prod_username]
-      pass: [prod_password]
-      dbname: [dbname]
-      schema: [prod_schema]
+      threads: 1
+      host: localhost
+      port: 5432
+      user: dbt
+      pass: dbt
+      dbname: financial_data
+      schema: financial_raw
 
   target: dev

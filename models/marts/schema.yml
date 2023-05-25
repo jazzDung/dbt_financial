@@ -1,0 +1,15 @@
+
+version: 2
+
+models:
+  - name: dim_organization_overview
+    description: "Detailed organization's data"
+    columns:
+      - name: ticker
+        description: "Stock symbol of dim_organization_overview, primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_price_history
+    description: "Cleaned daily stock price history data"
