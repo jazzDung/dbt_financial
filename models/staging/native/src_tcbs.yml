@@ -1,0 +1,18 @@
+
+version: 2
+
+sources:
+  - name: raw
+    description: pretty much everything collected from tcbs site (With organization info from SSI)
+    database: financial_data
+    schema: financial_raw
+    tables:
+      - name: price_history
+        description: Stock price history flattened data
+        loaded_at_field: _airbyte_emitted_at
+      - name: organization
+        description: Organization flattened data
+        loaded_at_field: _airbyte_emitted_at
+      - name: organization_overview
+        description: Additional organization data, flattened
+        loaded_at_field: _airbyte_emitted_at
