@@ -38,3 +38,4 @@ models:
       +schema: financial_clean
     staging:
       +materialized: view
+      +schema: financial_raw
