@@ -2,17 +2,30 @@
 version: 2
 
 sources:
-  - name: financial_raw
-    description: pretty much everything collected from tcbs site (With organization info from SSI)
+  - name: price_history
+    description: Organization stock price history, daily data
     database: financial_data
     schema: financial_raw
     tables:
       - name: price_history
-        description: Stock price history flattened data
+        description: Organization stock price history, daily data
         loaded_at_field: _airbyte_emitted_at
+  - name: organization
+    description: Organization overview information
+    database: financial_data
+    schema: financial_raw
+    tables:
       - name: organization
-        description: Organization flattened data
+        description: Organization overview information, collected from SSI
         loaded_at_field: _airbyte_emitted_at
       - name: organization_overview
-        description: Additional organization data, flattened
+        description: Organization overview information, collected from TCBS
         loaded_at_field: _airbyte_emitted_at
+  - name: cash_flow
+    description: Organization stock price history, quarterly and yearly data
+    database: financial_data
+    schema: financial_raw
+    tables:
+      - name: cash_flow
+        description: Organization stock price history, quarterly and yearly data
+        loaded_at_field: _airbyte_emitted_ats

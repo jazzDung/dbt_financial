@@ -9,4 +9,4 @@ select
     comgroupcode as com_group_code
 
 
-from {{ source('financial_raw', 'organization') }}
+from {{ source('organization', 'organization') }}

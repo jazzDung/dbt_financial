@@ -5,6 +5,6 @@ select
     low,
     close,
     volume,
-    tradingdate as trading_date
-
-from {{ source('financial_raw', 'price_history') }}
+    to_timestamp(tradingDate, 'YYYY-MM-DDTHH:MI:SS.MS') as trading_date
+    
+from {{ source('price_history', 'price_history') }}
