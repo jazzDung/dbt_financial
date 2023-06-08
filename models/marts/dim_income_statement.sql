@@ -1,10 +1,10 @@
 WITH income_statement  AS (
-    SELECT * FROM {{REF ('stg_income_statement')}}
+    SELECT * FROM {{ref ('stg_income_statement')}}
 ),
 
-FINAL AS (
+final AS (
     SELECT *
     FROM income_statement
 )
 
-SELECT * FROM FINAL
+SELECT * FROM final

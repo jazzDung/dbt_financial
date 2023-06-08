@@ -1,0 +1,14 @@
+WITH cash_flow  AS (
+    SELECT * FROM {{ref ('stg_cash_flow')}}
+),
+income_statement  AS (
+    SELECT * FROM {{ref ('stg_income_statement')}}
+),
+balance_sheet  AS (
+    SELECT * FROM {{ref ('stg_balance_sheet')}}
+),
+price_history  AS (
+    SELECT * FROM {{ref ('stg_price_history')}}
+),
+
+

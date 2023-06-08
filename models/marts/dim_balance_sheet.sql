@@ -1,10 +1,10 @@
 WITH balance_sheet  AS (
-    SELECT * FROM {{REF ('stg_balance_sheet')}}
+    SELECT * FROM {{ref ('stg_balance_sheet')}}
 ),
 
-FINAL AS (
+final AS (
     SELECT *
     FROM balance_sheet
 )
 
-SELECT * FROM FINAL
+SELECT * FROM final
