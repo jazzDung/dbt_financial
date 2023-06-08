@@ -1,10 +1,10 @@
-with price_history as (
-    select * from {{ref ('stg_price_history')}}
+WITH price_history  AS (
+    SELECT * FROM {{REF ('stg_price_history')}}
 ),
 
-final as (
-    select *
-    from price_history
+FINAL AS (
+    SELECT *
+    FROM price_history
 )
 
-select * from final
+SELECT * FROM FINAL

@@ -1,10 +1,10 @@
-with cash_flow as (
-    select * from {{ref ('stg_cash_flow')}}
+WITH cash_flow  AS (
+    SELECT * FROM {{REF ('stg_cash_flow')}}
 ),
 
-final as (
-    select *
-    from cash_flow
+FINAL AS (
+    SELECT *
+    FROM cash_flow
 )
 
-select * from final
+SELECT * FROM FINAL
